@@ -4,5 +4,87 @@
 <h1 class="title">
   Evently
 </h1>
+<div class="columns is-centered">
+<div class="column is-half">
 
+<form method="POST" action="/guestlist">
+<div class="field is-vertical">
+  <div class="field-label is-normal">
+    <label class="label">Occasion</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control is-expanded has-icons-left">
+        <input class="input" type="text" placeholder="What's the happy occasion?">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="field is-vertical">
+  <div class="field-label is-normal">
+    <label class="label">Location</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control is-expanded has-icons-left">
+        <input class="input" type="text" placeholder="Where is your event taking place?">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="field is-vertical">
+  <div class="field-label is-normal">
+    <label class="label">Date</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control is-expanded has-icons-left">
+        <input class="input" type="date" placeholder="What's the date?">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="field is-vertical">
+  <div class="field-label is-normal">
+    <label class="label">Time</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control is-expanded has-icons-left">
+        <input class="input" type="time" placeholder="What time does it start?">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="field is-vertical">
+  <div class="field-body">
+    <div class="field">
+      <div class="control">
+        <button class="button is-info">
+          Send message
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+</div>
+</div>
 {% endblock %}

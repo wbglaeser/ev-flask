@@ -17,3 +17,14 @@ def profile():
 @login_required
 def event():
     return render_template('event.html')
+
+@main.route('/guestlist', methods=['POST'])
+@login_required
+def guestlist():
+    return render_template('guestlist.html')
+
+@main.route('/invitemessage', methods=['POST'])
+@login_required
+def invitemessage():
+    return render_template('message.html')
+
