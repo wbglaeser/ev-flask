@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from . import db
 
@@ -18,13 +18,12 @@ def profile():
 def event():
     return render_template('event.html')
 
-@main.route('/guestlist', methods=['POST'])
+@main.route('/event_overview', methods=['POST'])
 @login_required
-def guestlist():
-    return render_template('guestlist.html')
-
-@main.route('/invitemessage', methods=['POST'])
-@login_required
-def invitemessage():
-    return render_template('message.html')
-
+def event_overview():
+    print(request.form)
+    print(request.form["occasion"])
+    print(request.form["location"])
+    print(request.form["date"])
+    print(request.form["time"])
+    return render_template('event_overview.html')
