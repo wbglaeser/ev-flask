@@ -1,8 +1,11 @@
 from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 from . import db
+from .models import Event
 
 main = Blueprint('main', __name__)
+
+
 
 @main.route('/')
 def index():
@@ -21,9 +24,15 @@ def event():
 @main.route('/event_overview', methods=['POST'])
 @login_required
 def event_overview():
-    print(request.form)
-    print(request.form["occasion"])
-    print(request.form["location"])
-    print(request.form["date"])
-    print(request.form["time"])
-    return render_template('event_overview.html')
+
+    # create new event
+    new_event = Event(
+        occasion=request.form["occasion"],
+        location=request.form["location"],
+        date=request.form["date"],
+        time=request.form["time"],
+        subject=request.form["subject"],
+        message=request.form["message"],
+    )
+
+    return render_template('event_overview.html', event=new_event)
