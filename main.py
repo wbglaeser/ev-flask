@@ -1,11 +1,9 @@
 from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
-from . import db
-from .models import Event
+from app import db
+from models import Event
 
 main = Blueprint('main', __name__)
-
-
 
 @main.route('/')
 def index():
