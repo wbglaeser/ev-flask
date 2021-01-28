@@ -75,9 +75,11 @@
                     <div class="field-body">
                         <div class="field">
                             <div class="control">
-                                <a href="{{ url_for('main.index') }}" class="button is-info">
+                                <form action="{{ url_for('main.event_confirmation') }}" method="post">
+                                <button class="button is-info">
                                     Confirm and create event
-                                </a>
+                                </button>
+                                </form>
                             </div>
                         </div>
                     </div>
