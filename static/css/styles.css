@@ -1,0 +1,17 @@
+#occasion {display: none;}
+#occasion:target {  display: block; }
+
+#location {display: none;}
+#location:target {  display: block; }
+
+#date {display: none;}
+#date:target {  display: block; }
+
+#time {display: none;}
+#time:target {  display: block; }
+
+#guestlist {display: none;}
+#guestlist:target {  display: block; }
+
+#message {display: none;}
+#message:target {  display: block; }
