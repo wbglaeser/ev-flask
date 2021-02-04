@@ -60,5 +60,6 @@ def event_confirmation():
 
 @main.route('/event_link/<token>', methods=['GET'])
 def event_link(token):
+    
     events = Event.query.filter_by(token=token).first()
     return render_template('event_invite.html', event=events)
