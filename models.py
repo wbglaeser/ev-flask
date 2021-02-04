@@ -19,3 +19,4 @@ class Event(UserMixin, db.Model):
     time = db.Column(db.Time)
     subject = db.Column(db.String(100))
     message = db.Column(db.String(1000))
+    token = db.Column(db.String(100))
