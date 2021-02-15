@@ -21,7 +21,6 @@ def index():
 def profile():
 
     events = Event.query.filter_by(user_id=current_user.id).all()
-
     return render_template('profile.html', name=current_user.name, events=events)
 
 @main.route('/event')
@@ -48,9 +47,20 @@ def event_overview():
 
     return render_template('event_overview.html', event=new_event)
 
+@main.route('/event_details', methods=['POST'])
+@login_required
+def event_details():
+
+    user_id = current_user.id
+    subject = request.form["subject"]
+    event = Event.query.filter_by(user_id=user_id, subject=subject).first()
+
+    return render_template('event_overview.html', event=event)
+
 @main.route('/event_confirmation', methods=['POST'])
 @login_required
 def event_confirmation():
+
     new_event = pending_events[0]
     db.session.add(new_event)
     db.session.commit()
@@ -60,6 +70,7 @@ def event_confirmation():
 
 @main.route('/event_link/<token>', methods=['GET'])
 def event_link(token):
-    
+
     events = Event.query.filter_by(token=token).first()
+
     return render_template('event_invite.html', event=events)
