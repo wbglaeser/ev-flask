@@ -15,3 +15,10 @@
 
 #message {display: none;}
 #message:target {  display: block; }
+
+.infoTile {
+  diplay: flex;
+  flex-direction: column;
+  -ms-align-items: space-between;
+  align-items: space-between;
+}

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 from flask_login import login_required, current_user
 from app import db
 from models import Event
@@ -47,6 +47,25 @@ def event_overview():
 
     return render_template('event_overview.html', event=new_event)
 
+@main.route('/update_event', methods=['POST'])
+@login_required
+def event_update():
+
+    user_id = current_user.id
+    subject = request.form["subject"]
+    event = Event.query.filter_by(user_id=user_id, subject=subject).first()
+
+    # update event
+    event.user_id=current_user.id
+    event.occasion=request.form["occasion"]
+    event.location=request.form["location"]
+    event.date=datetime.strptime(request.form["date"], '%Y-%m-%d').date()
+    event.message=request.form["message"]
+
+    db.session.commit()
+
+    return redirect("/profile")
+
 @main.route('/event_details', methods=['POST'])
 @login_required
 def event_details():
@@ -55,7 +74,7 @@ def event_details():
     subject = request.form["subject"]
     event = Event.query.filter_by(user_id=user_id, subject=subject).first()
 
-    return render_template('event_overview.html', event=event)
+    return render_template('event_update.html', event=event)
 
 @main.route('/event_confirmation', methods=['POST'])
 @login_required

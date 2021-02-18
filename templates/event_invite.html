@@ -1,73 +1,74 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="has-text-centered">
 <h1 class="title">
-  Your Invite
+  Your Event
 </h1>
 <div class="columns is-centered">
-    <div class="column is-half">
+  <div class="column is-half">
 
-        <div class="box">
-            <h5 class="title is-5 has-text-black">Event details</h5>
-            <div class="content">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Occasion</td>
-                        <td><b>{{event.occasion}}</b></td>
-                    </tr>
-                    <tr>
-                        <td>Location</td>
-                        <td><b>{{event.location}}</b></td>
-                    </tr>
-                    <tr>
-                        <td>Date</td>
-                        <td><b>{{event.date}}</b></td>
-                    </tr>
-                    <tr>
-                        <td>Time</td>
-                        <td><b>{{event.time}}</b></td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical event-group">
+
+            <article class="tile is-child notification is-white event-element">
+              <p class="subtitle has-text-black">Occasion</p>
+              <p class="title has-text-black">{{event.occasion}}</p>
+            </article>
+
+            <article class="tile is-child notification is-white event-element">
+              <p class="subtitle has-text-black">Location</p>
+              <p class="title has-text-black">{{event.location}}</p>
+            </article>
+
+          </div>
+
+          <div class="tile is-parent is-vertical event-group">
+
+            <article class="tile is-child notification is-white event-element">
+              <p class="subtitle has-text-black">Date</p>
+              <p class="title is-5 has-text-black">{{event.date}}</p>
+            </article>
+
+            <article class="tile is-child notification is-white event-element">
+              <p class="subtitle has-text-black">Time</p>
+              <p class="title is-5 has-text-black">{{event.time}}</p>
+            </article>
+
+          </div>
+
         </div>
-
-        <div class="box">
+        <div class="tile is-parent event-group">
+          <article class="tile is-child notification is-white event-element">
             <h5 class="title is-5 has-text-black">Your message</h5>
             <article class="message">
-                <div class="message-header">
-                    <p>{{event.subject}}</p>
-                    <button class="delete" aria-label="delete"></button>
-                </div>
-                <div class="message-body">
-                    {{event.message}}
-                </div>
+              <div class="message-header">
+                <p>{{event.subject}}</p>
+              </div>
+              <div class="message-body">
+                {{event.message}}
+              </div>
             </article>
+          </article>
         </div>
-
-        <div class="box">
-            <h5 class="title is-5 has-text-black">Your guests</h5>
+      </div>
+      <div class="tile is-parent event-group">
+        <article class="tile is-child notification is-white event-element">
+          <div class="content">
+            <p class="title has-text-black">Guests</p>
+            <p class="subtitle has-text-black">List yours guests here</p>
             <div class="content">
-            <table class="table is-centered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                         <th><abbr title="Email">Email</abbr></th>
-                        <th><abbr title="Phone">Phone</abbr></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td>38</td>
-                        <td>23</td>
-                    </tr>
-                </tbody>
-            </table>
+              <!-- Content -->
             </div>
-        </div>
+          </div>
+        </article>
+      </div>
     </div>
+
+  </div>
 </div>
 
 {% endblock %}
