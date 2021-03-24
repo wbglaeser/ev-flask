@@ -1,29 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="columns is-centered">
-  <div class="column is-half">
+<div class="columns is-centered" id="question-container">
 
     <form method="POST" action="/event_overview">
 
-      <div class="box">
-        <h3 class="title is-4 has-text-black">
-          Event Details
-        </h3>
+      <div class="box" id="question-box">
 
-        <!-- Occasion -->
-        <div id="occasion">
+        <!-- Name -->
+        <div id="name">
           <div class="field is-vertical">
             <div class="field-label is-normal">
-              <label class="label">Occasion</label>
+              <label class="label question-field">What is your name?</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" name="occasion" placeholder="What's the happy occasion?">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="occasion" placeholder="Type in your name">
                 </p>
               </div>
             </div>
@@ -35,7 +28,37 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <a class="button is-info" href="#location">
+                  <a class="button next-button" href="#occasion">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Occasion -->
+        <div id="occasion">
+          <div class="field is-vertical">
+            <div class="field-label is-normal">
+              <label class="label question-field">What is the occasion?</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="occasion" placeholder="Type your occasion here">
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-vertical">
+            <div class="field-label">
+              <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <a class="button next-button" href="#location">
                     Next
                   </a>
                 </div>
@@ -190,6 +213,5 @@
 
       </div>
     </form>
-  </div>
 </div>
 {% endblock %}
