@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="columns is-centered" id="question-container">
+<div class="columns" id="question-container">
 
     <form method="POST" action="/event_overview">
 
@@ -71,15 +71,12 @@
         <div id="location">
           <div class="field is-vertical">
             <div class="field-label is-normal">
-              <label class="label">Location</label>
+              <label class="label question-field">What is the location?</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" name="location" placeholder="Where is your event taking place?">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="location" placeholder="Type your location here">
                 </p>
               </div>
             </div>
@@ -91,7 +88,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <a class="button is-info" href="#date">
+                  <a class="button next-button" href="#date">
                     Next
                   </a>
                 </div>
@@ -104,15 +101,12 @@
         <div id="date">
           <div class="field is-vertical">
             <div class="field-label is-normal">
-              <label class="label">Date</label>
+              <label class="label question-field">What is the date?</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input class="input" type="date" name="date" placeholder="What's the date?">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="date" placeholder="Type date here">
                 </p>
               </div>
             </div>
@@ -124,41 +118,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <a class="button is-info" href="#time">
-                    Next
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Time -->
-        <div id="time">
-          <div class="field is-vertical">
-            <div class="field-label is-normal">
-              <label class="label">Time</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded has-icons-left">
-                  <input class="input" type="time" name="time" placeholder="What time does it start?">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="field is-vertical">
-            <div class="field-label">
-              <!-- Left empty for spacing -->
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="control">
-                  <a class="button is-info" href="#message">
+                  <a class="button next-button" href="#message">
                     Next
                   </a>
                 </div>

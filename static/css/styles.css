@@ -27,15 +27,32 @@
 }
 
 .hero-body {
-  padding: 48px 30px 48px 30px;
+  padding: 48px 50px 48px 50px;
 }
 
 .body-background {
   background-color: #FFA781;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.main-font-color {
+.navbar-adjust {
+  background-color: inherit !important;
+}
+
+#main-head {
   color: #5B0E29;
+  font-size:60px;
+}
+
+#super-main-head {
+  color: #5B0E29;
+  font-size: 36px;
+}
+
+#navMenu {
+  background-color: #FFA781;
+  box-shadow: 0px 0px;
 }
 
 a.home-select:hover {
@@ -54,12 +71,15 @@ a.start-button:hover {
 
 #question-container {
   justify-content: flex-start;
+  margin: 0px;
+  padding: 0px 150px 0px 150px;
 }
 
 #question-box {
   background-color: #FFA781;
   padding: 50px;
   min-width: 650px;
+  margin: 0px 0px 0px 0px;
 }
 
 .question-field {
