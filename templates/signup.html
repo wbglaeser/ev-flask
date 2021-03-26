@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="column is-4 is-offset-4">
-    <h3 class="title">Sign Up</h3>
-    <div class="box">
+    <h3 class="title" id="login-field">Sign Up</h3>
+    <div class="box" id="signup-box">
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <div class="notification is-danger">
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+            <button class="button is-info is-large is-fullwidth" id="signup-button">Sign Up</button>
         </form>
     </div>
 </div>

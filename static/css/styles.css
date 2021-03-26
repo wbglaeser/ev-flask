@@ -55,6 +55,11 @@
   box-shadow: 0px 0px;
 }
 
+.navbar-item-style {
+  color: #5B0E29;
+  padding-left: 50px;
+}
+
 a.home-select:hover {
   background-color: #FFA781;
 }
@@ -72,20 +77,54 @@ a.start-button:hover {
 #question-container {
   justify-content: flex-start;
   margin: 0px;
-  padding: 0px 150px 0px 150px;
 }
 
 #question-box {
   background-color: #FFA781;
   padding: 50px;
-  min-width: 650px;
   margin: 0px 0px 0px 0px;
 }
 
-.question-field {
+/* begin login */
+#login-box {
+  background-color: #FFA781;
+}
+
+#login-field {
   font-size: 54px !important;
   text-align: left;
   color: #5B0E29;
+}
+
+#login-button {
+  background-color: #5B0E29;
+}
+/* end login */
+
+/* begin signup */
+#signup-box {
+  background-color: #FFA781;
+}
+
+#signup-field {
+  font-size: 54px !important;
+  text-align: left;
+  color: #5B0E29;
+}
+
+#signup-button {
+  background-color: #5B0E29;
+}
+/* end signup */
+
+.question-field {
+  font-size: 36px !important;
+  text-align: left;
+  color: #5B0E29;
+}
+
+#date-field {
+  padding-bottom: 12px;
 }
 
 .next-button {
@@ -99,7 +138,7 @@ a.next-button:hover {
 }
 
 .question-input {
-  font-size: 42px !important;
+  font-size: 24px !important;
   text-align: left;
   color: #5B0E29;
   opacity: 40%;

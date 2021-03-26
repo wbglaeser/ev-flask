@@ -58,36 +58,6 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                  <a class="button next-button" href="#location">
-                    Next
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Location -->
-        <div id="location">
-          <div class="field is-vertical">
-            <div class="field-label is-normal">
-              <label class="label question-field">What is the location?</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <p class="control is-expanded">
-                  <input class="input question-input" type="text" name="location" placeholder="Type your location here">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="field is-vertical">
-            <div class="field-label">
-              <!-- Left empty for spacing -->
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="control">
                   <a class="button next-button" href="#date">
                     Next
                   </a>
@@ -101,12 +71,52 @@
         <div id="date">
           <div class="field is-vertical">
             <div class="field-label is-normal">
-              <label class="label question-field">What is the date?</label>
+              <label class="label question-field">When is the event?</label>
+            </div>
+
+            <div class="field-body" id="date-field">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="date" placeholder="Date">
+                </p>
+              </div>
+            </div>
+
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="time" placeholder="Time">
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="field is-vertical">
+            <div class="field-label">
+              <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <a class="button next-button" href="#location">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div id="location">
+          <div class="field is-vertical">
+            <div class="field-label is-normal">
+              <label class="label question-field">Where is the event?</label>
             </div>
             <div class="field-body">
               <div class="field">
                 <p class="control is-expanded">
-                  <input class="input question-input" type="text" name="date" placeholder="Type date here">
+                  <input class="input question-input" type="text" name="location" placeholder="Type your location here">
                 </p>
               </div>
             </div>
@@ -127,30 +137,18 @@
           </div>
         </div>
 
+
         <!-- Message to guests -->
         <div id="message">
           <div class="field is-vertical">
             <div class="field-label is-normal">
-              <label class="label">Subject</label>
+              <label class="label question-field">What is your message?</label>
             </div>
             <div class="field-body">
               <div class="field">
-                <div class="control">
-                  <input class="input" type="text" name="subject" placeholder="e.g. Partnership opportunity">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="field is-vertical">
-            <div class="field-label is-normal">
-              <label class="label">Message</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="control">
-                  <textarea class="textarea" name="message" placeholder="Explain how we can help you"></textarea>
-                </div>
+                <p class="control is-expanded">
+                  <input class="input question-input" type="text" name="message" placeholder="Type your message here">
+                </p>
               </div>
             </div>
           </div>
@@ -162,7 +160,7 @@
             <div class="field-body">
               <div class="field">
                 <div class="control">
-                    <button class="button is-info">
+                    <button class="button next-button">
                         Create Event
                     </button>
                 </div>

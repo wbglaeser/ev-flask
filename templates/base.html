@@ -28,24 +28,24 @@
 
                 <div class="navbar-menu" id="navMenu">
                   <div class="navbar-end">
-                      <a href="{{ url_for('main.index') }}" class="navbar-item main-font-color home-select">
+                      <a href="{{ url_for('main.index') }}" class="navbar-item navbar-item-style home-select">
                           Home
                       </a>
                       {% if current_user.is_authenticated %}
-                      <a href="{{ url_for('main.profile') }}" class="navbar-item main-font-color home-select">
+                      <a href="{{ url_for('main.profile') }}" class="navbar-item navbar-item-style home-select">
                           Profile
                       </a>
                       {% endif %}
                       {% if not current_user.is_authenticated %}
-                      <a href="{{ url_for('auth.login') }}" class="navbar-item main-font-color home-select">
+                      <a href="{{ url_for('auth.login') }}" class="navbar-item navbar-item-style home-select">
                           Login
                       </a>
-                      <a href="{{ url_for('auth.signup') }}" class="navbar-item main-font-color home-select">
+                      <a href="{{ url_for('auth.signup') }}" class="navbar-item navbar-item-style home-select">
                           Sign Up
                       </a>
                       {% endif %}
                       {% if current_user.is_authenticated %}
-                      <a href="{{ url_for('auth.logout') }}" class="navbar-item main-font-color home-select">
+                      <a href="{{ url_for('auth.logout') }}" class="navbar-item navbar-item-style home-select">
                           Logout
                       </a>
                       {% endif %}
